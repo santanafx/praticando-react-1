@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Header } from "./components/Header/Header";
+import { Profiles } from "./components/Profiles/Profiles";
+import "./App.css";
 
 function App() {
+  const perfis = [
+    { nome: "Lucas", foto: "https://github.com/santanafx.png" },
+    { nome: "Pedro", foto: "https://github.com/santanafx.png" },
+    { nome: "Maria", foto: "https://github.com/santanafx.png" },
+    { nome: "João", foto: "https://github.com/santanafx.png" },
+    { nome: "Otavio", foto: "https://github.com/santanafx.png" },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <div className="app__perfis">
+        {perfis.map((perfil) => (
+          <Profiles key={perfil.nome} foto={perfil.foto} nome={perfil.nome} />
+        ))}
+      </div>
     </div>
   );
 }

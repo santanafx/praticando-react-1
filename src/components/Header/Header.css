@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  margin: 5px 0 5px 14px;
+}
+
+.header__logo img {
+  margin: 0 4px;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  margin-left: 114px;
+}
+
+.header__menu img {
+  margin: 0 12.5px;
+}
